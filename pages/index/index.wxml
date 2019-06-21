@@ -1,0 +1,65 @@
+<!-- index.wxml -->
+<!-- <import src="../test/fe" /> -->
+<wxs src="./index.wxs" module="tools" />
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+      获取头像昵称
+    </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <my-component bindmyevent="onMyEvent">
+    <!-- 这部分内容将被放置在组件 <slot> 的位置上 -->
+    <view>这里是插入到组件slot中的内容</view>
+    <view slot='before'>的所得税的的</view>
+  </my-component>
+  <view>{{tools.msg}}</view>
+  <view>{{tools.bar(tools.FOO)}}</view>
+  <view class="section">
+    <view class="section__title">movable-view区域小于movable-area</view>
+    <movable-area style="height: 200px; width: 200px; background: red;">
+      <movable-view style="height: 50px; width: 50px; background: blue;" x="{{x}}" y="{{y}}" direction="all"></movable-view>
+    </movable-area>
+    <view class="btn-area">
+      <button size="mini" bindtap="tap">click me to move to (30px, 30px)</button>
+    </view>
+    <view class="section__title">movable-view区域大于movable-area</view>
+    <view style="margin: 100px 0;">
+      <movable-area style="height: 100px; width: 100px; background: red; outline: 2px sold red';">
+        <movable-view style="height: 200px; width: 200px; background: blue;" direction="all"></movable-view>
+      </movable-area>
+    </view>
+    <view class="section__title">可放缩</view>
+    <movable-area style="height: 200px; width: 200px; background: red;" scale-area>
+      <movable-view style="height: 50px; width: 50px; background: blue;" direction="all" bindchange="onChange" bindscale="onScale" scale scale-min="0.5" scale-max="4" scale-value="2"></movable-view>
+    </movable-area>
+  </view>
+</view>
+<view class="section">
+  <view class="section__title">vertical scroll</view>
+  <scroll-view scroll-y style="height: 200px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <view id="green" class="scroll-view-item bc_green"></view>
+    <view id="red" class="scroll-view-item bc_red"></view>
+    <view id="yellow" class="scroll-view-item bc_yellow"></view>
+    <view id="blue" class="scroll-view-item bc_blue"></view>
+  </scroll-view>
+  <view class="btn-area">
+    <button size="mini" bindtap="tap">click me to scroll into view</button>
+    <button size="mini" bindtap="tapMove">click me to scroll</button>
+  </view>
+</view>
+<view class="section section_gap">
+  <view class="section__title">horizontal scroll</view>
+  <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+    <view id="green" class="scroll-view-item_H bc_green"></view>
+    <view id="red" class="scroll-view-item_H bc_red"></view>
+    <view id="yellow" class="scroll-view-item_H bc_yellow"></view>
+    <view id="blue" class="scroll-view-item_H bc_blue"></view>
+  </scroll-view>
+</view>

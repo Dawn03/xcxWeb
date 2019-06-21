@@ -1,0 +1,163 @@
+/* pages/hot/hot.wxss */
+.movie-content{
+	display: flex;
+	justify-content: space-between;
+	padding:20rpx  0;
+	margin-left: 20rpx;
+	border-bottom: 1px solid #dfdfdf;
+
+}
+.img-box{
+	position: relative;
+	margin-right: 30rpx;
+	width: 130rpx;
+	height: 182rpx;
+}
+.play-btn{
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	height: 50rpx;
+	width: 50rpx;
+	background: rgba(000,000,000,.7);
+	border-radius: 50%;
+}
+.play{
+	position: absolute;
+	display: inline-block;
+	left:80%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	height: 0;
+	width: 15rpx;
+	border:15rpx transparent solid;
+	border-left:15rpx solid #fff;
+}
+.images{
+	width: 130rpx;
+	height: 182rpx;
+}
+.synopsis{
+	width: 720rpx;
+	font-size: 26rpx;
+}
+.movie-name{
+	display: inline-block;
+	color:#272727;
+	font-size: 32rpx;
+	font-weight: bold;
+	
+
+}
+.type-avator{
+	margin-top:20rpx;
+	color:#666;
+	font-size: 26rpx;
+}
+.studio-count{
+	margin-top:20rpx;
+	color:#999;
+	font-size: 26rpx;
+}
+.purchase-box{
+	margin-right: 25rpx;
+	width:92rpx;
+	
+}
+.comment{
+	margin: 20rpx 25rpx 20rpx 0;
+	color:#ffb912;
+}
+.count{
+	font-size:26rpx;
+}
+.scores{
+	font-size: 18rpx;
+}
+.purchase{
+	width:92rpx;
+	height: 58rpx;
+	color:white;
+	font-size: 24rpx;
+	text-align: center;
+	line-height: 58rpx;
+	background:#ef4238;
+	border-radius: 8rpx;
+
+}
+.pre-sale{
+	width:92rpx;
+	height: 58rpx;
+	color:#fff;
+	font-size: 24rpx;
+	text-align: center;
+	line-height: 58rpx;
+	background:#52b0eb;
+	border-radius: 8rpx;
+}
+
+.type-of-d,.type-hall-d,.type-of-d view {
+	display: inline-block;
+}
+.type-hall-d view{
+	display: inline-block;
+	/* margin-left: 15rpx; */
+	height:28rpx;
+	vertical-align: top;
+	text-align: center;
+	
+}
+.type-d{
+	/* width:32rpx; */
+	height: 33rpx!important;
+	margin-left: 15rpx;
+	color:#fff;
+	font: 28rpx/28rpx 'Arail';
+	background:#8bb7ce;
+	border-radius: 4rpx;
+	padding: 1rpx 4rpx;
+}
+.type-max{
+	/* width:50rpx; */
+	color:#8bb7ce;
+	font: 28rpx/28rpx 'Arail';
+	background:#fff;
+	border:1px solid #8bb7ce;
+	border-radius: 4rpx;
+	
+	padding: 1rpx 4rpx;
+
+}
+
+.combine-d{
+	/* width:32rpx; */
+	height: 33rpx!important;
+	color:#fff;
+	font: 28rpx/28rpx 'Arail';
+	background:#8bb7ce;
+	border-top-left-radius: 4rpx;
+	border-bottom-left-radius: 4rpx;
+	padding: 2rpx 10rpx;
+}
+.combine-max{
+	margin-left: 0!important;
+	width:50rpx;
+	height: 23rpx;
+	color:#8bb7ce;
+	background:#fff;
+	font:20rpx/28rpx 'Arail';
+	border:1px solid #8bb7ce;
+	border-top-right-radius: 4rpx;
+	border-bottom-right-radius: 4rpx;
+}
+.click-play{
+	padding: 4rpx 8rpx;
+	margin-left: 10rpx;
+	display: inline-block;
+	color: #fff;
+	font: 28rpx/28rpx "arial" ;
+	background:#ffb400;
+	border-radius: 6rpx;
+}
+

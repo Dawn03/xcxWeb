@@ -1,0 +1,44 @@
+/* pages/theatre/theatre.wxss */
+@import '../hot/hot';
+.header{
+	display: flex;
+	justify-content:space-between;
+	border-bottom: 1px solid #dfdfdf;
+}
+.inline{
+	padding:34rpx 0 18rpx;
+	font-size: 26rpx;
+	font-weight:bold;
+}
+.selects{
+	margin-left: 32rpx;
+	color:#cacaca;
+	padding-top:17rpx;
+
+}
+.cities{
+	display: inline-block;
+}
+.trangle{
+	display: inline-block;
+	position:relative;
+	top:28rpx;
+	height: 15rpx;
+	width: 0;
+	border:15rpx transparent solid;
+	border-top:15rpx solid #cacaca;
+}
+.under-line{
+	width:88rpx;
+	text-align: center;
+	border-bottom:6rpx solid #ef4024;
+}
+.search-btn{
+	width:89rpx;
+	font-size: 0;
+	border-left:1px solid #dfdfdf;
+}
+.search-icon{
+	text-align: center;
+	margin-left:25rpx;
+}

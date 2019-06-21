@@ -1,0 +1,177 @@
+/* pages/purchase/purchase.wxss */
+.display_a{
+	display: flex;
+	justify-content: space-around;
+}
+.display_b{
+	display: flex;
+	justify-content: space-between;
+}
+.studio_template{
+	margin-left: 30rpx;
+	padding: 40rpx 0 40rpx 0;
+}
+.studio_name{
+	font:bold 30rpx 'arail';
+	color:#000;
+}
+.sutdio_addr{
+	display: flex;
+	margin-right:46rpx;
+	justify-content: space-between;
+	line-height: 70rpx;
+	font-size: 26rpx;
+	color: #666;
+}
+.curr_img_box{
+    position: relative;
+    overflow: hidden;
+    outline: 1px solid #fff;
+	width: 100%;
+	height: 330rpx;
+}
+.emptyBox{
+    width: 140rpx!important;
+}
+.img_size_box{
+    /* margin:0 15rpx; */
+    display: inline-block;
+    width: 162rpx;
+    height: 226rpx;
+  }
+.on_img_size_box {
+    border: 8rpx solid #fff;
+    width: 180rpx;
+    height: 250rpx;
+    display: inline-block;
+
+}
+
+.img_size{
+	width: 100%;
+	height: 100%;
+}
+.te{
+	position: absolute;
+	z-index: 99;
+	bottom:-1rpx;
+	left: 50%;
+	display: inline-block;
+	height: 13rpx;
+	border: 20rpx transparent solid;
+	border-bottom: 20rpx solid #fff;
+}
+.img_bg{
+	position: absolute;
+	filter: blur(100rpx);
+	width: 100%;
+	height: 292rpx;
+}
+.choose_img{
+	display: flex;
+	position: relative;
+	padding: 40rpx 0 28rpx;
+	height: auto;
+    white-space: nowrap;
+}
+
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.show_img{
+	position: absolute;
+	left: 50%;
+	right: 50%;
+	transform: translate(-50%,-12%);
+	width: 184rpx;
+	height: 252rpx;
+	z-index: 9;
+}
+.movie_name{
+	padding: 24rpx 0;
+	text-align: center;
+	border-top: 1px solid #dcdcdc;
+}
+.movie_title{
+	font: 30rpx 'arail';
+	color:#333;
+}
+.num{
+	font: 26rpx 'arail';
+	color:#ffb400;
+}
+.score{
+	font-size: 22rpx;
+	color:#ffb400;
+}
+.message{
+	padding-top: 18rpx;
+	color:#999;
+	font: 26rpx 'arail';
+}
+/* 日期 */
+.time_box{
+	width: 100%;
+	border-top: 1px solid #dcdcdc;
+  	border-bottom: 1px solid #dcdcdc;
+}
+.date_time {
+  margin-right: 24rpx;
+  display: inline-block;
+  width: 216rpx;
+  height: 87rpx;
+  color:#707070;
+  text-align: center;
+  font: bold 26rpx/90rpx 'arial';
+ 
+}
+.curr{
+	color:#ef4238;
+	border-bottom: 3px solid #ef4238;
+}
+.purchase_box{
+	padding: 34rpx 0;
+	margin-left: 30rpx;
+	border-bottom: 1px solid #dcdcdc;
+}
+.dis{
+	flex-direction: column;
+	margin-right: 50rpx;
+}
+.start_time_type{
+	font:bold 30rpx/52rpx "Time";
+	color:#333;
+}
+.end_time_hall{
+	font: 22rpx "Time";
+	color:#9c9c9c;
+}
+.purchase{
+	margin: 10rpx 12rpx 0 0;
+
+}
+.price{
+	font:bold 26rpx 'arial';
+	color:#ef4238;
+}
+.units{
+	font-size:20rpx;
+	color:#ef4238;
+}
+.buy{
+	display: inline-block;
+	margin-left: 40rpx;
+	width: 94rpx;
+	height: 54rpx;
+	font-size:24rpx;
+	line-height: 54rpx;
+	text-align: center;
+	color:#fff;
+	background: #ef4238;
+	border-radius: 10rpx;
+
+}

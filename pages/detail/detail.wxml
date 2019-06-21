@@ -1,0 +1,91 @@
+<!--pages/detail/detail.wxml-->
+
+<view class='curWrap'>
+	<view class='detail_top'>
+		<view class='bg_content'>
+			<image  mode='aspectFill' class='bg_img' src="{{detailMovie.img}}"></image>
+		</view>
+		<view class='img_synopsis_content'>
+			<view class='img_container'>
+				 <image bindtap='goStudio' mode='aspectFill' class='movie_detail_img' src="{{detailMovie.img}}"></image>
+			</view>
+			<view class='img_detai_right'>
+				<view class='c_name' >{{detailMovie.nm}}</view>
+				<view class='e_name'>{{detailMovie.enm}}</view>
+				<text style="font-weight: 700; color: #FFCC00; fon-size: 40rpx;">点映评分{{detailMovie.sc}}</text>
+				<text style="color: #fff; font-size: 24rpx;">({{detailMovie.snum}}人评)</text>
+				<view class='movie_type'>{{detailMovie.cat}}</view>
+				<view class='movie_type'>{{detailMovie.src}}/{{detailMovie.dur}}分钟</view>
+				<view class='movie_type'>{{detailMovie.pubDesc}}</view>
+			</view>
+			<view class="">
+				
+			</view>
+		</view>			
+		
+		<view class='hot_level'>
+			<view class='hot_box'>
+				<image class='want_watch' src='../images/icon/heart_gray.png'></image>
+				<text class='comment_scores'>{{detailMovie.bingeWatch}} 人想看</text>
+			</view>
+			<view class='hot_box'>
+				<image class='want_watch' src='../images/icon/star_gray.png'>星</image>
+				<text class='comment_scores'>{{detailMovie.watched}}看过</text>
+			</view>
+		</view>
+	</view>
+	
+	<view style="background: #fff;">
+		<!-- 选择日期 -->
+		<scroll-view class="scroll-view_H {{fixed ? 'pfix' : 'pab'}}" scroll-x='true' style="width: 100%">
+			<view wx:for="{{movieDate}}" data-activeindex='{{index}}' data-datetime='{{item.datetime}}' bindtap="chooseDate" wx:key="index"  class="pub_date {{index == activeindex ? 'active_date' : 'other_date'}}" >
+				 {{item.day}}{{item.date}}
+			</view>
+		</scroll-view>
+		<!-- 全程 品牌 特色 -->
+		<!-- <view class="" >
+			<view class="" >全城</view>
+			<view class="" >品牌</view>
+			<view class="" >特色</view>
+		</view> -->
+		<block wx:for="{{cinemas}}"  wx:key='item.id'>
+			<view class="cenima" hover-class="none" hover-stop-propagation="false">
+				<view class="" >
+					<text class="cenima_name">{{item.nm}}</text>
+					<text class="min_price">
+						<text style='font-size: 36rpx;'>{{item.sellPrice}} </text> 
+						<text style='font-size: 22rpx;'>元起 </text>
+					</text>
+				</view>
+				<view class="address" >
+					<text style='width: 90%;' >{{item.addr}}</text>
+					<text style='width: 10%;' >{{item.distance}}</text>
+					
+				</view>
+				<view class="taggroup" >
+					<text wx:if="{{item.tag.endorse}}" class="bc" >改签</text>
+					<text wx:if="{{item.tag.snack}}" class="yc" >小吃</text>
+					<text wx:if="{{item.tag.vipTag}}" class="yc" >折扣卡</text>
+					<text wx:if="{{item.tag.hallType.length}}" wx:for="{{item.tag.hallType}}" wx:for-item='tag' wx:key='index' class="bc" >{{tag}}</text>
+				</view>
+				<view class="normal" >
+					<view class="card">卡</view>
+					<text class="" >{{item.promotion.cardPromotionTag}}</text>
+				</view>
+				<view class="normal" >
+					{{item.showTimes}}
+				</view>
+			</view>
+		</block>
+	</view>	
+</view>
+
+
+
+
+
+
+
+
+
+

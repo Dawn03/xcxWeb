@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/theatre/theatre",
+    "pages/detail/detail",
+    "pages/purchase/purchase",
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/cinema/cinema",
+    "pages/waiting/waiting",
+    "pages/hot/hot",
+    "pages/test/fe",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#dc403a",
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "仿猫眼电影",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#a2a2a2",
+    "selectedColor": "dc403a",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/theatre/theatre",
+        "text": "电影",
+        "iconPath": "./images/tab/gray-dianying.jpg",
+        "selectedIconPath": "./images/tab/red-dianying.jpg"
+      },
+      {
+        "pagePath": "pages/cinema/cinema",
+        "text": "影院",
+        "iconPath": "./images/tab/gray-yingyuan.png",
+        "selectedIconPath": "./images/tab/red-yingyuan.jpg"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "./images/tab/gray-faxin.png",
+        "selectedIconPath": "./images/tab/red-faxian.jpg"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,329 @@
+/* pages/detail/detail.wxss */
+.curWrap{
+	/* background: #f5f5f5; */
+}
+.detail_top{
+	position: relative;
+	width: 100%;
+	height: 440rpx;
+	overflow: hidden;
+
+}
+.bg_content{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 440rpx;
+}
+.bg_img{
+	position: absolute;
+	filter: blur(100rpx);
+	width: 100%;
+	height: 440rpx;
+}
+
+.img_synopsis_content{
+	display: flex;
+	padding: 26rpx 30rpx 24rpx;
+}
+.img_container{
+	position: relative;
+	width: 222rpx;
+	height: 302rpx;
+}
+.movie_detail_img{
+	width: 222rpx;
+	height: 302rpx;
+}
+.play_icon{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	width: 75rpx;
+	height: 75rpx;
+	border-radius: 50%;
+	border: 2px solid rgba(255,255,255,.8);
+	background: rgba(102,98,98,.8)
+
+}
+.begin_icon{
+	display: inline-block;
+	position: absolute;
+	left: 70%;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 20rpx transparent solid;
+	border-left: 20rpx #fff solid;
+	transform: translate(-50%,-50%);
+}
+.img_detai_right{
+	margin-left:32rpx;
+	width: 440rpx;
+	text-align: left;
+	z-index: 4;
+}
+.c_name{
+	padding-top: 20rpx;
+	font-weight: bold;
+	font-size: 40rpx;
+	color:#fff;
+}
+.e_name{
+	font-size: 24rpx;
+  margin: 6rpx 0;
+	color:#fff;
+}
+.comment_mess{
+	display: flex;
+}
+.second{
+	margin-left: 70rpx;
+}
+.professional_comment{
+	font-size: 22rpx;
+	font-weight: bold;
+	color:#d3d1d1;
+}
+.scores_count{
+	font-size: 26rpx;
+	color:#ffc600;
+}
+.scores{
+	font-size: 20rpx;
+	color:#d3d1d1;
+}
+.movie_type{
+	padding-top: 10rpx;
+	font-size: 24rpx;
+	color:#d3d1d1;
+}
+.hot_level{
+	display: flex;
+	padding: 0 30rpx; 
+	width: 690rpx;
+	justify-content: space-between;
+	z-index: 9;
+}
+.hot_box{
+	width: 334rpx;
+	height:60rpx;
+	line-height: 60rpx;
+	text-align: center;
+	border-radius: 10rpx;
+	background: rgba(131,141,151,.8);
+}
+.want_watch{
+	margin-right: 15rpx; 
+	width: 30rpx;
+	height: 27rpx;
+	vertical-align: middle;
+}
+.comment_scores{
+	font-size: 26rpx;
+	color:#fcfcfc;
+}
+ /*设置容器水平滚动, 文档上对css没有进行描述，想要横向滚动，
+ 首先要把子元素设置成一行，但是float不能用，
+ 只能使用;display: inline-block;  */
+.scroll-view_H {
+	width: 100%;
+	white-space: nowrap;
+}
+.scroll-view-item_H {
+	display: inline-block;
+	width: 400rpx;
+	height: 200rpx;
+	background: #ffc600;
+}
+/* 是否把日期固定定位 */
+.pfix{
+	position: fixed;
+	top: 0;
+	z-index: 99;
+	background: #fff;
+}
+.pab{
+	position: static;
+}
+.pub_date {
+	width: 230rpx;
+	margin: 0 9rpx;
+	line-height: 86rpx;
+	text-align: center;
+	display: inline-block;
+	font-size: 28rpx;
+
+}
+.active_date {
+	color: #f03d37;
+	border-bottom: 4rpx solid #f03d37;
+}
+.other_date {
+	color: #666;
+	border-bottom: 4rpx solid transparent;
+}
+.cenima {
+	padding: 26rpx 26rpx 26rpx 0;
+	margin-left: 30rpx; 
+}
+.cenima_name {
+	line-height: 23px;
+	margin-right: 40rpx;
+    font-size: 32rpx;
+    color: #000;
+}
+.min_price {
+	color:#f03d37;
+
+}
+.address {
+	margin-top: 12rpx;
+    font-size: 26rpx;
+    color: #666;
+}
+.address text{
+ display: inline-block;
+}
+.taggroup{
+	
+}
+.taggroup text {
+	display: inline-block;
+	margin-right: 10rpx;
+	padding: 4rpx 6rpx;
+	font-size: 22rpx;
+	border-radius: 4rpx;
+}
+.bc{
+	color: #589daf;
+	border: 2rpx solid #589daf;
+}
+.yc {
+	color: #f90;
+	border: 2rpx solid #f90;
+}
+.normal {
+	font-size: 22rpx;
+	color:#999;
+	margin-top: 10rpx;
+}
+.card {
+	padding: 2rpx; 
+	text-align: center;
+	line-height: 28rpx;
+	display:inline-block;
+	height: 28rxp; 
+	width: 30rpx; 
+	background: #66C5F9;
+	color: #fff;
+	border-radius: 8rpx;
+	margin-right: 4rpx;
+}
+/* .introduce{
+	width: 100%;
+	color:#030303;
+	font: 32rpx/54rpx 'arail';
+	border-bottom: 1px solid #d3d1d1;
+	background: #fff;
+	
+}
+.introduce_detail{
+	padding: 30rpx 30rpx 20rpx;
+	text-align: left;
+	overflow: hidden;
+
+} */
+/*.add{
+	transition-property:height;
+	transition-duration:5s;
+}*/
+/* .show{
+	padding: 30rpx 30rpx 20rpx;
+	height: auto;
+	text-align: left;
+}
+.arrow_box{
+	
+	width: 100%;
+	text-align: center;
+}
+.down_arrow{
+	padding: 20rpx 0;
+	width: 25rpx;
+	height: 12rpx;
+}
+.actors_content{
+	margin-top:22rpx;
+	border-top: 1px solid #d1d1d1;
+	border-bottom: 1px solid #d1d1d1;
+	background: #fff;
+}
+.credits{
+	color: #000;
+	font-size: 32rpx;
+	font-weight: bold;
+	padding: 30rpx;
+} */
+/* +++++++++++++ */
+/* .recommend_scroll_x_box {
+  display: flex;
+  margin-left: 30rpx;
+  height: auto;
+  white-space: nowrap;
+ 
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+} */
+/* .recommend_hot_box {
+  width: 140rpx;
+  margin-right: 10rpx;
+  display: inline-block;
+}
+.recommend_hot_image {
+  width: 140rpx;
+  height: 182rpx;
+}
+.detector_name{
+	padding-top: 20rpx;
+	font-size: 24rpx;
+	color:#000;
+}
+.decrible{
+	padding-bottom: 26rpx;
+	font-size: 24rpx;
+	line-height: 40rpx;
+	color:#999;
+}
+.studio_box{
+	
+	padding: 30rpx;
+	border-top: 1px solid #bcbcbc;
+}
+.temp{
+	display: flex;
+	justify-content: space-between;
+
+}
+.all_studio{
+	font:bold 30rpx 'arail';
+	color:#000;
+	text-decoration: blink;
+}
+.scan{
+	display: inline-block;
+	padding: 3rpx 5rpx;
+	color:#589daf;
+	height: 40rpx;
+	font-size: 26rpx;
+	text-align: center;
+	line-height: 40rpx;
+	border-radius: 8rpx;
+	border:1px solid #589daf;
+} */
+/* outline: 1px solid red; */

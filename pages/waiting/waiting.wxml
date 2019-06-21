@@ -1,0 +1,6 @@
+<!-- pages/waiting/waiting.wxml -->
+<template name='waiting'>
+    <view>
+        <text class="" selectable="false" space="false" decode="false">当前待映</text>
+    </view>
+</template>

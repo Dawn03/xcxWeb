@@ -1,0 +1,40 @@
+<!-- pages/hot/hot.wxml -->
+<template name='hot'>
+    <view>
+        <view class='movie-content' bindtap="goDetail" id='{{id}}' data-moviename="{{nm}}" data-rt="{{rt}}">
+            <view class='img-box'>
+                <view class='play-btn'>
+                    <text class='play'></text>
+                </view>
+                <image class="images" src="{{img}}" mode="aspectFit" lazy-load="false" binderror="" bindload=""></image>
+            </view>
+            <view class='synopsis'>
+                <view class='type-of-d'>
+                    <view class='movie-name'>{{nm}}</view>
+                    <view class='type-hall-d'>
+                        <view wx:if="{{dType != false}}" class='type-d'>{{dType}}</view>
+                        <view wx:if="{{dType != false}}" class='type-max'>{{maxType}}</view>
+                        <!-- <view class="wx:else" hover-class="none" hover-stop-propagation="false"></view> -->
+                        <view class='click-play'>点映</view>
+                    </view>
+                </view>
+                <view class='type-avator'>主演： {{star}}</view>
+                <view class='studio-count'>{{showInfo}}</view>
+            </view>
+            <view class='purchase-box'>
+                <view wx:if="{{globalReleased}}" class='comment'>
+                    <text class='count'>{{sc}}</text>
+                    <text class='scores'>分</text>
+                </view>
+                <view wx:else class='comment'>
+                    <text class='count'>{{wish}}</text>
+                    <!-- <text class='scores'>人想看</text> -->
+                </view>
+                <view wx:if="{{showst == 3}}" class='purchase'  bindtap="gouPiao">
+                    购票
+                </view>
+                <view wx:elif="{{showst == 4}}" class='pre-sale'  bindtap="gouPiao">预售</view>
+            </view>
+        </view>
+    </view>
+</template>

@@ -1,0 +1,60 @@
+<!--pages/purchase/purchase.wxml-->
+<view class='studio_template'>
+	<view class='studio_name'>{{cinemaDetailModel.nm }}</view>
+	<view  class='sutdio_addr'>
+		<text>{{cinemaDetailModel.addr }}</text>
+		<text>地图</text>
+	</view>
+</view>
+<view class='curr_img_box'>
+	<image  src='../images/豆瓣电影/p2408893200.jpg' class='img_bg' mode='aspectFill'></image >
+	<scroll-view bindscroll='scrolltolower'  class="choose_img" scroll-x="true" scroll-with-animation="true">
+        <view class=" {{item.id == ''? 'emptyBox': ''}} {{item.id == currentM ? 'on_img_size_box' : 'img_size_box'}}" 
+           wx:for="{{movies}}" wx:key='item' id="{{item.id}}"  
+           style="margin:{{item.id == ''? '0 0' : '0 10rpx'}}; " 
+          >
+           <image bindtap='imgPosition'  id="{{item.id}}" 
+               class="img_size"   bindtap="chooseM"
+               mode='aspectFill' src="{{item.pic}}" ></image>
+        </view>
+	</scroll-view>
+	<view class='te'></view>
+	<!-- <view class='choose_img'> -->
+		<!-- <image  class='img_size' src='../../images/豆瓣电影/p2411608656魔弦传说.jpg' ></image> -->
+		<!-- <image  class='show_img' src='../../images/豆瓣电影/p2411608656魔弦传说.jpg' ></image> -->
+	<!-- </view> -->
+</view>
+<view class='movie_name'>
+	<view clas='movie_title'>
+		<text>{{currentMovie.nm}}</text>
+		<text class='num'> {{currentMovie.sc}}</text>
+		<text class='score'>分</text>
+	</view>
+	<view class='message'>
+		{{currentMovie.ver}}
+	</view>
+</view>
+<view class='time_box'>
+	<view  class="date_time {{(item.flag ? 'curr' : '')}}" wx:for="{{dateTime}}" wx:key='item'>
+  		{{item.title}}
+	</view>
+</view>
+<scroll-view scroll-y="true" style="height: 500px;" bindscrolltolower="scrolltolower" >
+	<view wx:for="{{DateShow[0].date}}" wx:key='item'  class='purchase_box display_b'>
+		<view class='display_b'>
+			<view class='dis display_b'>
+				<text  class='start_time_type'>{{item.tm}}</text>
+				<text class='start_time_type'>散场{{item.end}}</text>
+			</view>
+			<view class='dis display_b'>
+				<text class='start_time_type'>{{item.lang}}{{item.tp}}</text>
+				<text class='start_time_type'>{{item.th}}</text>
+			</view>
+		</view>
+		<view class='purchase'>
+			<!-- <text class='price'> 34.5<text class='units'>元</text></text> -->
+			<text bindtap='goSeats' class='buy' data-showdate='{{item.dt}}' id="{{item.showId}}">购票</text>
+		</view>
+	</view>
+</scroll-view>
+
