@@ -13,7 +13,7 @@
         <view class='inline {{currentData == 1 ? "under-line" : ""}}' data-current="1" bindtap='checkCurrent'>
             待映
         </view>
-        <view class=' search-btn inline'>
+        <view bindtap='searchBtn' class='search-btn inline'>
             <icon class='search-icon' type="search" size="24" color='#ef4024' />
         </view>
     </view>

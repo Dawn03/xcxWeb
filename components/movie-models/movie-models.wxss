@@ -1,0 +1,69 @@
+/* components/movie-models/movie-models.wxss */
+.fl{
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix:after{
+  content: '.';
+  display: block;
+  visibility: hidden;
+  clear: both;
+  height: 0;
+}
+.movie_c{
+  padding: 24rpx 0 24rpx 0rpx ;
+  margin-left: 30rpx;
+  min-height: 180rpx;
+  border-bottom: 2rpx solid #e6e6e6;
+}
+.img_c{
+    background-color: #eee;
+    width: 128rpx;
+    height: 180rpx;
+    float: left;
+    margin-right: 10px;
+}
+.c_name{
+  font-size: 34rpx; 
+  font-weight: 700;   
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.movie_type{
+  font-size: 28rpx;
+  color: #666;
+  margin-top: 4rpx;
+}
+.time{
+  font-size: 26rpx;
+  margin-top: 4rpx;
+  color: #666;
+}
+.right-c{
+  margin-right: 30rpx;
+}
+.pub {
+  border: none;
+    color: #fff;
+    border-radius: 8rpx;
+    font-size: 24rpx;
+    line-height: 54rpx;
+    text-align: center;
+    width: 96rpx;
+}
+.buy {
+  background-color: #ef4238;
+  margin-top: 36rpx;
+}
+.want {
+  background-color: #faaf00;
+}
+.score {
+  font-size: 20rpx;
+  margin-top: 10rpx;
+  color: #fa0;
+  padding-left: 10rpx;
+}

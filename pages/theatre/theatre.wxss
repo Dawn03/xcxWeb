@@ -36,7 +36,7 @@
 .search-btn{
 	width:89rpx;
 	font-size: 0;
-	border-left:1px solid #dfdfdf;
+	/* border-left:1px solid #dfdfdf; */
 }
 .search-icon{
 	text-align: center;

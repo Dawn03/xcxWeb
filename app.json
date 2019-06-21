@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/searchPage/searchPage",
     "pages/theatre/theatre",
     "pages/detail/detail",
     "pages/purchase/purchase",
@@ -8,8 +9,8 @@
     "pages/cinema/cinema",
     "pages/waiting/waiting",
     "pages/hot/hot",
-    "pages/test/fe",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "components/movie-models/movie-models"
   ],
   "window": {
     "navigationBarBackgroundColor": "#dc403a",

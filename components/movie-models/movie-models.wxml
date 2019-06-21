@@ -1,0 +1,29 @@
+<!-- components/movie-models/movie-models.wxml -->
+<!-- components/movie-model.wxml -->
+<template name='movie-model'>
+  <view class="movie_c clearfix">
+    <view class="left_c fl ">
+      <view class="clearfix" >
+        <view class='img_c fl'>
+          <!-- <image></image> -->
+        </view>
+        <view class="fl">
+          <view class="c_name">
+            <text>千与千寻</text>
+            <!-- <image>影厅类型</image> -->
+          </view>
+          <view class="movie_type">千と千尋の神隠し</view>
+          <view class="movie_type">动画,冒险,奇幻,家庭し</view>
+          <view class="time">2019-06-21</view>
+        </view>
+      </view>
+    </view>
+    <view class="right-c fr">
+      <view class="score">9.6分</view>
+      <view class="buy pub">购票</view>
+      <!-- <view class="pub">预售</view>
+    <view class="score">123 人想看</view>
+    <view class="want pub">想看</view> -->
+    </view>
+  </view>
+</template>

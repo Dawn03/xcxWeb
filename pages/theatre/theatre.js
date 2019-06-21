@@ -28,7 +28,13 @@ Page({
   onLoad: function (options) {
     this.initHot()
   },
+  // 搜索 跳转到搜索页
+  searchBtn() {
+    wx.navigateTo({
+      url: '../searchPage/searchPage'
+    })
 
+  },
   // 获取电影 热映列表
   initHot() {
     const _this = this

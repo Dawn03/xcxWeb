@@ -1,0 +1,16 @@
+<!-- pages/searchPage/searchPage.wxml -->
+<import src="../../components/movie-models/movie-models" />
+<view>
+    <view style="background: #F5F5F5;">
+        <view class="clearfix">
+            <view class="search_c fl">
+                <!-- <input  bindinput="bindKeyInput" placeholder="输入同步到view中"/> -->
+                <icon class="icon-p" type="search" size="15" color="#979797" style="margin-left: 6rpx;" />
+                <input placeholder="搜电影、搜影院" class='search-input' />
+                <icon class="icon-p" type="clear" size="15" color="#979797" style="margin-right: 6rpx;" />
+            </view>
+            <view class="cancel  fr">取消</view>
+        </view>
+    </view>
+    <template is='movie-model'></template>
+</view>
