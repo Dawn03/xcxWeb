@@ -1,0 +1,80 @@
+/* components/cinema-models/cinema-models.wxss */
+.fl {
+  float: left;
+}
+.fr{
+  float: right;
+}
+.clearfix:after{
+  content: '.';
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+.cinema_box{
+  border-bottom: 1px solid #e6e6e6;
+  margin-left: 30rpx;
+  padding: 30rpx 30rpx 30rpx 0;
+  background: #fff;
+}
+.cinema_name_pub {
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.cinema_name{
+  font-size: 34rpx;
+  max-width: calc(100% - 120rpx);
+  
+}
+.cinema_price{
+  font-size: 34rpx;
+  color: #ef4238;
+  margin-left: 20rpx;
+    
+}
+.cinema_unit{
+  font-size: 22rpx;
+  color: #999;
+  margin-left: 6rpx;
+}
+.cinema_addr{
+  font-size: 26rpx;
+  color: #999;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 12rpx 0;
+  width: calc(100% - 150rpx);
+}
+.cinema_dist{
+  font-size: 26rpx;
+  color: #999;
+   margin: 12rpx 0;
+   width: 150rpx;
+   text-align: right;
+}
+.cinema_pub{
+  position: relative;
+  display: inline-block;
+  padding: 0 6rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  border-radius: 4rpx;
+  font-size: .6rem;
+}
+.cinema_blue_tag{
+  border: 2rpx solid #589daf;
+  color: #589daf;
+  margin-right: 8rpx;
+
+}
+.cinema_yellow_tag{
+  color: #f90;
+  border:1px solid #f90;
+  margin-right: 8rpx;
+}
+
+

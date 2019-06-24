@@ -1,0 +1,2 @@
+/* pages/allmovies/allmovies.wxss */
+@import '../../components/movie-models/movie-models';

@@ -1,0 +1,9 @@
+<!-- pages/allmovies/allmovies.wxml -->
+<import src='../../components/movie-models/movie-models' />
+<view class="">
+    <scroll-view scroll-y="true" style="height:100%;" bindscrolltolower="onScrolltolower">
+        <block wx:for="{{allmovies}}" wx:key="index">
+            <template data='{{...item}}' is='movie-model'></template>
+        </block>
+    </scroll-view>
+</view>

@@ -111,6 +111,14 @@ Page({
   onReady: function () {
 
   },
+  //到该电影对应的媒体库
+  gomedia(e) {
+    // 
+    wx.navigationTo({
+      url: `../detialMedia/detailMedia?movieId=${e.currentTarget.id}`
+    })
+    console.log(116, e.currentTarget.id)
+  },
   // 获取影院列表
   getCinema(params) {
     wx.request({
@@ -141,7 +149,7 @@ Page({
           ...this.data.movieDate, ...res.data.showDays.dates.map((item, index) => {
             return {
               date: item.date.slice(5).replace('-', '月') + '日',
-              day: index <= 2 ? todayTmorrow[index] : week[(w + 3) % 7],
+              day: index <= 2 ? todayTmorrow[index] : week[(w + index ) % 7],
               datetime: item.date
             }
           })

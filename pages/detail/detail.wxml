@@ -1,13 +1,13 @@
 <!--pages/detail/detail.wxml-->
 
 <view class='curWrap'>
-	<view class='detail_top'>
+	<view class='detail_top' style="position: relative;">
 		<view class='bg_content'>
 			<image  mode='aspectFill' class='bg_img' src="{{detailMovie.img}}"></image>
 		</view>
 		<view class='img_synopsis_content'>
 			<view class='img_container'>
-				 <image bindtap='goStudio' mode='aspectFill' class='movie_detail_img' src="{{detailMovie.img}}"></image>
+				<image bindtap='goStudio' mode='aspectFill' class='movie_detail_img' src="{{detailMovie.img}}"></image>
 			</view>
 			<view class='img_detai_right'>
 				<view class='c_name' >{{detailMovie.nm}}</view>
@@ -18,8 +18,8 @@
 				<view class='movie_type'>{{detailMovie.src}}/{{detailMovie.dur}}分钟</view>
 				<view class='movie_type'>{{detailMovie.pubDesc}}</view>
 			</view>
-			<view class="">
-				
+			<view bindtap='gomedia' id='{{detailMovie.id}}' class="" style="position: absolute; top: 40%;right: 10rpx; color: #fff; font-size: 60rpx;">
+				>
 			</view>
 		</view>			
 		

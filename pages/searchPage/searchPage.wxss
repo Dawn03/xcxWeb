@@ -1,5 +1,9 @@
 /* pages/searchPage/searchPage.wxss */
 @import '../../components/movie-models/movie-models.wxss';
+@import '../../components/cinema-models/cinema-models.wxss';
+page{
+    background-color: #f5f5f5;
+  }
 .fl {
     float: left;
 }
@@ -41,4 +45,20 @@
     font-size: 30rpx;
     color: #f03d37;
 }
-
+.total{
+    color: #ef4238;
+    text-align: center;
+    line-height: 88rpx;
+    height: 88rpx;
+    font-size: 30rpx;
+    background: #fff;
+}
+.cinema{
+    margin-top: 20rpx;
+    font-size: 30rpx;
+    color: #999;
+    padding: 18rpx 30rpx;
+    font-weight: 400;
+    background: #fff;
+    border-bottom: 1px solid #e6e6e6;
+}

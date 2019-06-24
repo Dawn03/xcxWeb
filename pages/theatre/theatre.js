@@ -31,7 +31,7 @@ Page({
   // 搜索 跳转到搜索页
   searchBtn() {
     wx.navigateTo({
-      url: '../searchPage/searchPage'
+      url: '../searchPage/searchPage?stype=-1'
     })
 
   },

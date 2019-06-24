@@ -1,16 +1,33 @@
 <!-- pages/searchPage/searchPage.wxml -->
 <import src="../../components/movie-models/movie-models" />
-<view>
-    <view style="background: #F5F5F5;">
+<import src="../../components/cinema-models/cinema-models" />
+<view >
+    <view >
         <view class="clearfix">
             <view class="search_c fl">
                 <!-- <input  bindinput="bindKeyInput" placeholder="输入同步到view中"/> -->
                 <icon class="icon-p" type="search" size="15" color="#979797" style="margin-left: 6rpx;" />
-                <input placeholder="搜电影、搜影院" class='search-input' />
-                <icon class="icon-p" type="clear" size="15" color="#979797" style="margin-right: 6rpx;" />
+                <input bindinput="getSearch" value='{{inputValue}}' placeholder='{{placeholder}}'  class='search-input' />
+                <icon bindtap='clearSearch'  class="icon-p" type="clear" size="15" color="#979797" style="margin-right: 6rpx;" />
             </view>
-            <view class="cancel  fr">取消</view>
+            <view bindtap='clickCancel' class="cancel  fr">取消</view>
         </view>
     </view>
-    <template is='movie-model'></template>
+        <block wx:for="{{searchmovies}}" wx:key='{{index}}' style='background:#fff;'>
+            <template is='movie-model' data="{{...item}}" ></template>
+        </block>
+        <view wx:if="{{searchmovies.length > 0}}">
+            <view bindtap='searchAll' wx:if="{{stype == -1}}"  class="total">查看全部{{total}}部影视剧</view>
+            <view class="total" wx:else>查看全部{{total}}家影院</view>
+        </view>
+       
+        <view wx:if="{{searchcinemas.length > 0}}" class="cinema">
+          影院
+        </view>
+        <block wx:for="{{searchcinemas}}" wx:key='{{index}}' style='background:#fff;'>
+            <template is='cinema-model' data="{{...item}}" ></template>
+        </block>
+       
+
+    
 </view>

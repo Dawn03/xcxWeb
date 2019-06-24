@@ -12,11 +12,21 @@
   clear: both;
   height: 0;
 }
+.nowrap{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
 .movie_c{
   padding: 24rpx 0 24rpx 0rpx ;
   margin-left: 30rpx;
   min-height: 180rpx;
   border-bottom: 2rpx solid #e6e6e6;
+  background: #fff;
+
+}
+.de_box{
+  width: calc(100% - 180rpx);
 }
 .img_c{
     background-color: #eee;
@@ -24,8 +34,10 @@
     height: 180rpx;
     float: left;
     margin-right: 10px;
+    overflow: hidden;
 }
 .c_name{
+  
   font-size: 34rpx; 
   font-weight: 700;   
   overflow: hidden;
@@ -36,14 +48,24 @@
   font-size: 28rpx;
   color: #666;
   margin-top: 4rpx;
+  width: 380rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+
 }
 .time{
   font-size: 26rpx;
   margin-top: 4rpx;
   color: #666;
 }
+.left_c{
+  width: calc(100% - 180rpx);
+
+}
 .right-c{
   margin-right: 30rpx;
+   width: 125rpx;
 }
 .pub {
   border: none;
@@ -55,15 +77,18 @@
     width: 96rpx;
 }
 .buy {
-  background-color: #ef4238;
   margin-top: 36rpx;
 }
 .want {
   background-color: #faaf00;
+ 
 }
 .score {
   font-size: 20rpx;
-  margin-top: 10rpx;
+  margin: 36rpx 0 20rpx 0;
   color: #fa0;
   padding-left: 10rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
 }

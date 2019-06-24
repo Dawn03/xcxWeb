@@ -1,0 +1,24 @@
+<!-- components/cinema-models/cinema-models.wxml -->
+<template name='cinema-model'>
+  <view style="background: #fff;">
+    <view class="cinema_box">
+      <view class=''>
+        <text class="cinema_name cinema_name_pub">{{nm}}</text>
+        <text class="cinema_price cinema_name_pub">{{sellPrice}}</text>
+        <text class="cinema_unit cinema_name_pub">元起</text>
+      </view>
+      <view class="clearfix">
+        <view class="cinema_addr  fl">{{addr}}</view>
+        <view class="cinema_dist fr">{{distance}}</view>
+      </view>
+      <view>
+        <text class="cinema_blue_tag cinema_pub">座</text>
+        <text wx:if="{{allowRefund == 1}}" class="cinema_blue_tag cinema_pub">退</text>
+        <text wx:if="{{endorse == 1}}" class="cinema_blue_tag cinema_pub">改签</text>
+        <text wx:if="{{snack == 1}}" class="cinema_yellow_tag cinema_pub">小吃</text>
+        <text  wx:if="{{vipDesc == 1}}" class="cinema_yellow_tag cinema_pub">折扣卡</text>
+        <text wx:if="{{hallType.length> 0}}" wx:for="{{hallType}}"  wx:key="{{id}}" class="cinema_blue_tag cinema_pub">{{item}}</text>
+      </view>
+    </view>
+  </view>
+</template>
