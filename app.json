@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/detialMedia/detailMedia",
     "pages/theatre/theatre",
     "pages/searchPage/searchPage",
     "pages/detail/detail",
@@ -12,8 +13,7 @@
     "pages/logs/logs",
     "components/movie-models/movie-models",
     "components/cinema-models/cinema-models",
-    "pages/allmovies/allmovies",
-    "pages/detialMedia/detailMedia"
+    "pages/allmovies/allmovies"
   ],
   "window": {
     "navigationBarBackgroundColor": "#dc403a",

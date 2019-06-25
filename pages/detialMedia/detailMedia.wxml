@@ -1,2 +1,43 @@
 <!--pages/detialMedia/detailMedia.wxml-->
-<text>pages/detialMedia/detailMedia.wxml</text>
+<view class="">
+  <!-- 顶部电影信息 -->
+  <view class=" ">
+    <!-- <image></image> -->
+    <!-- <view> 表示可播放的按钮</view> -->
+
+  </view>
+  <view class=" ">
+    <view>千与千寻</view>
+    <view>千与千寻搜噶</view>
+    <view>星星 9.5</view>
+    <view>（9.6万人评）</view>
+    <view>动画， 冒险</view>
+    <view>日本/125分</view>
+    <view>2019-06-21 08:00 大陆上映</view>
+  </view>
+</view>
+
+<view class="">特惠购票</view>
+<view class="">
+  <view>剧情简介</view>
+  <view>点击查看更多剧情</view>
+</view>
+<view class="">
+<scroll-view>
+  <view >
+    <view>
+      <!-- <image></image> -->
+    </view>
+    <view>宫崎骏</view>
+    <view>导演</view>
+  </view>
+</scroll-view>
+</view>
+<view class="">
+  全体职员 >
+</view>
+<view class="">媒体库</view>
+<view class="">
+  
+</view>
+<view class=""></view>

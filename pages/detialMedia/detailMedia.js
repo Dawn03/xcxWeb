@@ -15,13 +15,14 @@ Page({
     this.setData({
       movieId: options.movieId
     })
+    this.initPage()
     console.log(options.movieId)
   },
   initPage() {
     wx.request({
       url: `http://m.maoyan.com/ajax/detailmovie?movieId=${this.data.movieId}`,
-      success: () => {
-        
+      success: (res) => {
+        console.log(12, res)
       }
     })
   },

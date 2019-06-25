@@ -114,10 +114,9 @@ Page({
   //到该电影对应的媒体库
   gomedia(e) {
     // 
-    wx.navigationTo({
+    wx.navigateTo({
       url: `../detialMedia/detailMedia?movieId=${e.currentTarget.id}`
     })
-    console.log(116, e.currentTarget.id)
   },
   // 获取影院列表
   getCinema(params) {
