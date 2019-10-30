@@ -38,6 +38,7 @@
     </view>
     <!-- 待映 -->
     <view hidden='{{currentId!=2}}'>
+        <view class="most-wish">vscode 使用 git </view>
         <view class="most-wish">近期最受期待</view>
         <template is='waitPlaying' data="{{wishList}}">
         </template>
