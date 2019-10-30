@@ -1,32 +1,45 @@
 <!-- pages/theatre/theatre.wxml -->
 <import src='../hot/hot' />
 <import src='../waiting/waiting' />
+<import src='../templates/models' />
 <view class="" hover-class="none" hover-stop-propagation="false">
     <view class='header'>
         <view class="selects inline">
             <text class='cities'>成都</text>
             <text class='trangle'></text>
         </view>
-        <view class='inline {{currentData == 0 ? "under-line" : ""}}' data-current="0" bindtap='checkCurrent'>
+        <view class='inline {{item.typeId == currentId ? "under-line": ""}}' wx:for="{{navSection}}" wx:key="id"
+            id="{{item.typeId}}" catchtap="handleTap">
+            {{item.name}}
+        </view>
+        <view bindtap='searchBtn' class='search-btn inline'>
+            <icon class='search-icon' type="search" size="24" color='#ef4024' />
+        </view>
+        <!-- <view class='inline {{currentData == 0 ? "under-line" : ""}}' data-current="0" bindtap='checkCurrent'>
             热映
         </view>
         <view class='inline {{currentData == 1 ? "under-line" : ""}}' data-current="1" bindtap='checkCurrent'>
             待映
         </view>
-        <view bindtap='searchBtn' class='search-btn inline'>
-            <icon class='search-icon' type="search" size="24" color='#ef4024' />
-        </view>
+       -->
     </view>
-    <swiper current="{{currentData}}" duration="300" bindchange="bindchange" style='height: 2000rpx;'>
-        <swiper-item>
-            <scroll-view scroll-y="true" style="height:100%;" bindscrolltolower="onScrolltolower">
-                <block wx:for="{{hotList}}" wx:key='{{index}}'>
-                    <template is='hot' data='{{...item}}'></template>
-                </block>
-            </scroll-view>
-        </swiper-item>
-        <swiper-item>
-            <template is='waiting'></template>
-        </swiper-item>
-    </swiper>
+
+    <!-- 热映 -->
+    <view hidden='{{currentId!=1}}'>
+        <swiper current="{{currentData}}" duration="300" bindchange="bindchange" style='height: 2000rpx;'>
+            <swiper-item>
+                <scroll-view scroll-y="true" style="height:100%;" bindscrolltolower="onScrolltolower">
+                    <block wx:for="{{hotList}}" wx:key='{{index}}'>
+                        <template is='hot' data='{{...item}}'></template>
+                    </block>
+                </scroll-view>
+            </swiper-item>
+        </swiper>
+    </view>
+    <!-- 待映 -->
+    <view hidden='{{currentId!=2}}'>
+        <view class="most-wish">近期最受期待</view>
+        <template is='waitPlaying' data="{{wishList}}">
+        </template>
+    </view>
 </view>

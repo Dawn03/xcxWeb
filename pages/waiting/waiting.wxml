@@ -1,6 +1,21 @@
 <!-- pages/waiting/waiting.wxml -->
 <template name='waiting'>
     <view>
+        
+        <view>
+            <scroll-view class='wrapper' bindscroll="scroll" scroll-x="true">
+                <view class='horizontal-scroll' wx:for="{{dataList}}" wx:key="{{index}}">
+                    <text>{{index}}</text>
+                </view>
+            </scroll-view>
+            <!-- <scroll-view class="" scroll-x="true" style="width: 100%">
+                <view id="demo1" class="scroll-view-item_H demo-text-1">第三大</view>
+                <view id="demo2" class="scroll-view-item_H demo-text-2">是是是</view>
+                <view id="demo3" class="scroll-view-item_H demo-text-3">是是是</view>
+            </scroll-view> -->
+        </view>
+        <view></view>
+        <view></view>
         <text class="" selectable="false" space="false" decode="false">当前待映</text>
     </view>
 </template>

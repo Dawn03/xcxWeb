@@ -2,8 +2,8 @@
 Page({
   data: {
     // flag:true,
-    currentM: 'id2',
-    dateTime: [//Dates
+    currentM: '1',
+    dateTime: [ //Dates
       {
         title: '今天03月15日',
         flag: true,
@@ -21,67 +21,93 @@ Page({
       sc: '9.8分',
       ver: '110分钟 | 爱情 | xxx、xx 、xx',
     },
-    DateShow: [
-      {
-        tm: 'tm',
-        end: 'end',
-        lang: 'lang',
-        tp: 'tp',
-        th: 'th',
-        dt: 'dt',
-        showId: 'showId',
-      }
-    ],
-    movies: [//movies
-      {
-        pic: '',
-        id: '',
-      },
-      {
-        pic: '',
-        id: '',
-      },
-      {
-        pic: './../images/avatar/197604b046aae66.jpg',
-        id: 'id2',
-      }, {
-        pic: './../images/avatar/2d9802327d98ca7.jpg',
-        id: 'id3',
-      }, {
-        pic: './../images/avatar/93637cbe48f123f.jpg',
-        id: 'id4',
-      }, {
-        pic: './../images/avatar/9e38c40a0876647.jpg',
-        id: 'id5',
-      }, {
-        pic: './../images/avatar/197604b046aae66.jpg',
-        id: 'id6',
-      }, {
-        pic: './../images/avatar/197604b046aae66.jpg',
-        id: 'id7',
-      }, {
-        pic: './../images/avatar/2d9802327d98ca7.jpg',
-        id: 'id8',
-      }, {
-        pic: './../images/avatar/93637cbe48f123f.jpg',
-        id: 'id9',
-      }, {
-        pic: './../images/avatar/9e38c40a0876647.jpg',
-        id: 'id10',
-      }, {
-        pic: './../images/avatar/197604b046aae66.jpg',
-        id: 'id11',
-      },
-      {
-        pic: '',
-        id: '',
-      },
-      {
-        pic: '',
-        id: '',
-      },
-    ],
+    DateShow: [{
+      tm: 'tm',
+      end: 'end',
+      lang: 'lang',
+      tp: 'tp',
+      th: 'th',
+      dt: 'dt',
+      showId: 'showId',
+    }],
+    bgImg: '../images/豆瓣电影/p2408893200.jpg',
+    movies: [ //movies
 
+      {
+        pic: './../images/avatar/197604b046aae66.jpg',
+        id: '1',
+      }, {
+        pic: './../images/avatar/2d9802327d98ca7.jpg',
+        id: '2',
+      }, {
+        pic: './../images/avatar/93637cbe48f123f.jpg',
+        id: '3',
+      }, {
+        pic: './../images/avatar/9e38c40a0876647.jpg',
+        id: '4',
+      }, {
+        pic: './../images/avatar/197604b046aae66.jpg',
+        id: '5',
+      }, {
+        pic: './../images/avatar/197604b046aae66.jpg',
+        id: '6',
+      }, {
+        pic: './../images/avatar/2d9802327d98ca7.jpg',
+        id: '7',
+      }, {
+        pic: './../images/avatar/93637cbe48f123f.jpg',
+        id: '8',
+      }, {
+        pic: './../images/avatar/9e38c40a0876647.jpg',
+        id: '9',
+      }, {
+        pic: './../images/avatar/197604b046aae66.jpg',
+        id: '10',
+      },
+
+    ],
+    currentTab: 0,
+    taskList: [{
+      name: '有趣好玩'
+    }, {
+      name: '有趣好玩'
+    }, {
+      name: '有趣好玩'
+    }, {
+      name: '有趣好玩'
+    }, {
+      name: '有趣好玩'
+    }, {
+      name: '有趣好玩'
+    }, {
+      name: '有趣好玩'
+    }, {
+      name: '有趣好玩'
+    }, {
+      name: '有趣好玩'
+    }, {
+      name: '有趣好玩'
+    }, {
+      name: '有趣好玩'
+    }, {
+      name: '有趣好玩'
+    }, {
+      name: '有趣好玩'
+    }, {
+      name: '有趣好玩'
+    }, {
+      name: '有趣好玩'
+    }, {
+      name: '有趣好玩'
+    }, ]
+
+  },
+  handleClick1(e) {
+    console.log(4444, e.currentTarget.dataset.index)
+    let currentTab = e.currentTarget.dataset.index
+    this.setData({
+      currentTab
+    })
   },
   onLoad: function (options) {
     console.log(options)
@@ -90,13 +116,15 @@ Page({
     })
   },
   scrolltolower(e) {
-    
+
   },
   chooseM(e) {
     console.log(109, e)
-    this.setData({
-      'currentM': e.currentTarget.id
-    })
+    let currentTab =
+      this.setData({
+        'currentM': e.currentTarget.id,
+        'bgImg': e.currentTarget.dataset.imgsrc
+      })
     // e.currentTarget.offsetLeft = 125
     console.log(this.data.currentM)
   },
@@ -151,7 +179,7 @@ Page({
     })
     this.setData(this.data)
   },
-  
+
   imgPosition(e) {
     /*160 230*/
     // console.log(e.detail)

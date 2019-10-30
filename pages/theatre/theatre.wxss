@@ -1,44 +1,59 @@
 /* pages/theatre/theatre.wxss */
 @import '../hot/hot';
-.header{
+@import '../templates/models';
+
+.header {
 	display: flex;
-	justify-content:space-between;
+	justify-content: space-between;
 	border-bottom: 1px solid #dfdfdf;
 }
-.inline{
-	padding:34rpx 0 18rpx;
+
+.inline {
+	padding: 34rpx 0 18rpx;
 	font-size: 26rpx;
-	font-weight:bold;
+	font-weight: bold;
 }
-.selects{
+
+.selects {
 	margin-left: 32rpx;
-	color:#cacaca;
-	padding-top:17rpx;
+	color: #cacaca;
+	padding-top: 17rpx;
 
 }
-.cities{
+
+.cities {
 	display: inline-block;
 }
-.trangle{
+
+.trangle {
 	display: inline-block;
-	position:relative;
-	top:28rpx;
+	position: relative;
+	top: 28rpx;
 	height: 15rpx;
 	width: 0;
-	border:15rpx transparent solid;
-	border-top:15rpx solid #cacaca;
+	border: 15rpx transparent solid;
+	border-top: 15rpx solid #cacaca;
 }
-.under-line{
-	width:88rpx;
+
+.under-line {
+	width: 88rpx;
 	text-align: center;
-	border-bottom:6rpx solid #ef4024;
+	border-bottom: 6rpx solid #ef4024;
 }
-.search-btn{
-	width:89rpx;
+
+.search-btn {
+	width: 89rpx;
 	font-size: 0;
 	/* border-left:1px solid #dfdfdf; */
 }
-.search-icon{
+
+.search-icon {
 	text-align: center;
-	margin-left:25rpx;
+	margin-left: 25rpx;
+}
+
+.most-wish {
+	font-size: 30rpx;
+	color: #333;
+	margin: 30rpx;
 }

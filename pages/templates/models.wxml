@@ -1,0 +1,43 @@
+<!--pages/templates/models.wxml-->
+<!-- 待映 -->
+<template name='waitPlaying'>
+  <scroll-view class="scroll-wrapper" scroll-x scroll-with-animation="true">
+    <view class="navigate-item" id="item{{index}}" wx:for="{{wishList}}" wx:key="{{index}}" data-index="{{index}}"
+      bindtap="goDetail">
+      <view class="m_box">
+        <view class="cellect">bg</view>
+        <view class="img_size">
+          <!-- <image class="img" src="{{item.img}}" alt="但事实上"></image> -->
+          <image class="img" src="../images/豆瓣电影/p2358700489海伦娜之路.jpg" alt="但事实上"></image>
+        </view>
+        <view class="want_bg">
+          <text class="want_watch">{{item.wish}}人想看</text>
+        </view>
+      </view>
+      <view class="title line-ellipsis">{{item.nm}}</view>
+      <view class="coming-title">{{item.comingTitle}}</view>
+    </view>
+  </scroll-view>
+</template>
+<!-- 购票 -->
+<template name='purchase'>
+  <image src='{{bgImg}}' class='img_bg' mode='aspectFill'></image>
+  <scroll-view scroll-x scroll-into-view="item{{currentM < 5 ? 0 : currentM - 4}}" class="choose_img"
+    scroll-with-animation="true">
+    <view class=" {{item.id == ''? 'emptyBox': ''}} {{item.id == currentM ? 'on_img_size_box' : 'img_size_box'}}"
+      wx:for="{{movies}}" wx:key='item' id="{{item.id}}" style="margin:{{item.id == ''? '0 0' : '0 10rpx'}}">
+      <image id="{{item.id}}" class="img_size" catchtap="chooseM" mode='aspectFill' data-imgsrc="{{item.pic}}"
+        src="{{item.pic}}"></image>
+    </view>
+  </scroll-view>
+  <view class='te'></view>
+
+  <scroll-view class="scroll-wrapper" scroll-x scroll-with-animation="true"
+    scroll-into-view="item{{currentTab < 4 ? 0 : currentTab - 3}}">
+    <view class="navigate-item" id="item{{index}}" wx:for="{{taskList}}" wx:key="{{index}}" data-index="{{index}}"
+      bindtap="handleClick1">
+      <view class="names {{currentTab === index ? 'active' : ''}}">{{item.name}}</view>
+      <view class="currtline {{currentTab === index ? 'active' : ''}}"></view>
+    </view>
+  </scroll-view>
+</template>

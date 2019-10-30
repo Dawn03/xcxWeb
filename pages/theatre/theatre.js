@@ -8,25 +8,55 @@ Page({
    * 页面的初始数据
    */
   data: {
-    currentData: 0,
-    hotList: [
-      {
-        id: "id123",
-        nm: "海伦娜之路",
-        dType: "3D",
-        avator: "xx xx  xx",
-        img: '../images/豆瓣电影/p2358700489海伦娜之路.jpg'
-      },
-    ],
+    currentId: '2',
+    navSection: [{
+      name: '热映',
+      typeId: '1'
+    }, {
+      name: '待映',
+      typeId: '2'
+    }],
+    hotList: [{
+      id: "id123",
+      nm: "海伦娜之路",
+      dType: "3D",
+      avator: "xx xx  xx",
+      img: '../images/豆瓣电影/p2358700489海伦娜之路.jpg'
+    }],
     hotListIds: [],
-    hotComplete: false
+    hotComplete: false,
+    wishList: [{
+      comingTitle: "2020年1月25日",
+      id: 1217023,
+      nm: "唐人街探案3",
+      wish: 495752,
+      wishst: 0,
+      img: '../images/豆瓣电影/p2358700489海伦娜之路.jpg',
+    }
+  ]
 
+  },
+  handleClick1(e) {
+    console.log(333, e.currentTarget.dataset.index)
+    let currentTab = e.currentTarget.dataset.index
+    this.setData({
+      currentTab
+    })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     this.initHot()
+  },
+  // nav 切换
+  handleTap: function (e) {
+    let id = e.currentTarget.id;
+    if (id) {
+      this.setData({
+        currentId: id
+      })
+    }
   },
   // 搜索 跳转到搜索页
   searchBtn() {
@@ -106,16 +136,16 @@ Page({
     })
   },
   //点击切换，滑块index赋值
-  checkCurrent: function (e) {
-    const that = this;
-    if (that.data.currentData === e.target.dataset.current) {
-      return false;
-    } else {
-      that.setData({
-        currentData: e.target.dataset.current
-      })
-    }
-  },
+  // checkCurrent: function (e) {
+  //   const that = this;
+  //   if (that.data.currentData === e.target.dataset.current) {
+  //     return false;
+  //   } else {
+  //     that.setData({
+  //       currentData: e.target.dataset.current
+  //     })
+  //   }
+  // },
   // 热映  购票
   gouPiao: function (e) {
     wx.navigateTo({
